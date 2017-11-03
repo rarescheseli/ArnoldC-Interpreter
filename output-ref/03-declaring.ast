@@ -1,0 +1,16 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <first>
+		nodes.ConstantNode <0>
+	nodes.PrintNode
+		nodes.VariableNode <first>
+	nodes.DeclareNode
+		nodes.LvalNode <second>
+		nodes.ConstantNode <1>
+	nodes.PrintNode
+		nodes.VariableNode <second>
+	nodes.DeclareNode
+		nodes.LvalNode <third>
+		nodes.ConstantNode <12345>
+	nodes.PrintNode
+		nodes.VariableNode <third>

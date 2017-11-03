@@ -1,0 +1,84 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <a>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <b>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <c>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <d>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <e>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <f>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <g>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <h>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <Nothing>
+		nodes.ConstantNode <1>
+	nodes.IfNode
+		nodes.ConditionNode <a>
+		nodes.IfBodyNode
+			nodes.PrintNode
+				nodes.StringNode <a is true>
+		nodes.ElseBodyNode
+			nodes.IfNode
+				nodes.ConditionNode <b>
+				nodes.IfBodyNode
+					nodes.PrintNode
+						nodes.StringNode <b is true>
+				nodes.ElseBodyNode
+					nodes.IfNode
+						nodes.ConditionNode <c>
+						nodes.IfBodyNode
+							nodes.PrintNode
+								nodes.StringNode <c is true>
+						nodes.ElseBodyNode
+							nodes.IfNode
+								nodes.ConditionNode <d>
+								nodes.IfBodyNode
+									nodes.PrintNode
+										nodes.StringNode <d is true>
+								nodes.ElseBodyNode
+									nodes.IfNode
+										nodes.ConditionNode <e>
+										nodes.IfBodyNode
+											nodes.PrintNode
+												nodes.StringNode <e is true>
+										nodes.ElseBodyNode
+											nodes.IfNode
+												nodes.ConditionNode <f>
+												nodes.IfBodyNode
+													nodes.PrintNode
+														nodes.StringNode <f is true>
+												nodes.ElseBodyNode
+													nodes.IfNode
+														nodes.ConditionNode <g>
+														nodes.IfBodyNode
+															nodes.PrintNode
+																nodes.StringNode <g is true>
+														nodes.ElseBodyNode
+															nodes.IfNode
+																nodes.ConditionNode <h>
+																nodes.IfBodyNode
+																	nodes.PrintNode
+																		nodes.StringNode <h is true>
+																nodes.ElseBodyNode
+																	nodes.IfNode
+																		nodes.ConditionNode <Nothing>
+																		nodes.IfBodyNode
+																			nodes.PrintNode
+																				nodes.StringNode <Nothing is true. Everything is permitted.>
+																		nodes.ElseBodyNode
+																			nodes.PrintNode
+																				nodes.StringNode <This should not get printed>

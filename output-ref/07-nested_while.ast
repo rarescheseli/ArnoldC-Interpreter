@@ -1,0 +1,85 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <i>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <j>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <k>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <iLimit>
+		nodes.ConstantNode <2>
+	nodes.DeclareNode
+		nodes.LvalNode <jLimit>
+		nodes.ConstantNode <2>
+	nodes.DeclareNode
+		nodes.LvalNode <kLimit>
+		nodes.ConstantNode <2>
+	nodes.DeclareNode
+		nodes.LvalNode <iLoop>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <jLoop>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <kLoop>
+		nodes.ConstantNode <1>
+	nodes.WhileNode
+		nodes.ConditionNode <iLoop>
+		nodes.BodyNode
+			nodes.AssignmentNode
+				nodes.LvalNode <jLoop>
+				nodes.ConstantNode <1>
+			nodes.AssignmentNode
+				nodes.LvalNode <j>
+				nodes.ConstantNode <0>
+			nodes.WhileNode
+				nodes.ConditionNode <jLoop>
+				nodes.BodyNode
+					nodes.AssignmentNode
+						nodes.LvalNode <kLoop>
+						nodes.ConstantNode <1>
+					nodes.AssignmentNode
+						nodes.LvalNode <k>
+						nodes.ConstantNode <0>
+					nodes.WhileNode
+						nodes.ConditionNode <kLoop>
+						nodes.BodyNode
+							nodes.PrintNode
+								nodes.VariableNode <i>
+							nodes.PrintNode
+								nodes.VariableNode <j>
+							nodes.PrintNode
+								nodes.VariableNode <k>
+							nodes.AssignmentNode
+								nodes.LvalNode <k>
+								nodes.SumNode
+									nodes.RvalNode <k>
+									nodes.ConstantNode <1>
+							nodes.AssignmentNode
+								nodes.LvalNode <kLoop>
+								nodes.GreaterThanNode
+									nodes.RvalNode <kLimit>
+									nodes.RvalNode <k>
+					nodes.AssignmentNode
+						nodes.LvalNode <j>
+						nodes.SumNode
+							nodes.RvalNode <j>
+							nodes.ConstantNode <1>
+					nodes.AssignmentNode
+						nodes.LvalNode <jLoop>
+						nodes.GreaterThanNode
+							nodes.RvalNode <jLimit>
+							nodes.RvalNode <j>
+			nodes.AssignmentNode
+				nodes.LvalNode <i>
+				nodes.SumNode
+					nodes.RvalNode <i>
+					nodes.ConstantNode <1>
+			nodes.AssignmentNode
+				nodes.LvalNode <iLoop>
+				nodes.GreaterThanNode
+					nodes.RvalNode <iLimit>
+					nodes.RvalNode <i>

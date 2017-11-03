@@ -1,0 +1,15 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <myVar>
+		nodes.ConstantNode <3>
+	nodes.AssignmentNode
+		nodes.LvalNode <myVar>
+		nodes.MultiplicationNode
+			nodes.SumNode
+				nodes.RvalNode <myVar>
+				nodes.RvalNode <myVar>
+			nodes.ConstantNode <5>
+	nodes.PrintNode
+		nodes.StringNode <The value of myVar is:>
+	nodes.PrintNode
+		nodes.VariableNode <myVar>

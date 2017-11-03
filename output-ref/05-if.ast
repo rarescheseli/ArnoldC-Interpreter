@@ -1,0 +1,28 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <a>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <b>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <c>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <d>
+		nodes.ConstantNode <0>
+	nodes.AssignmentNode
+		nodes.LvalNode <d>
+		nodes.OrNode
+			nodes.OrNode
+				nodes.RvalNode <a>
+				nodes.RvalNode <b>
+			nodes.RvalNode <c>
+	nodes.IfNode
+		nodes.ConditionNode <d>
+		nodes.IfBodyNode
+			nodes.PrintNode
+				nodes.StringNode <(a || b || c) is true>
+		nodes.ElseBodyNode
+			nodes.PrintNode
+				nodes.StringNode <(a || b || c) is not true>

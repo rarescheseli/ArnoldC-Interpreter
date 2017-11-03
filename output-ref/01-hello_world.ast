@@ -1,0 +1,3 @@
+nodes.MainNode
+	nodes.PrintNode
+		nodes.StringNode <hello world>

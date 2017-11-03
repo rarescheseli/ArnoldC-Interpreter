@@ -1,0 +1,163 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <a>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <b>
+		nodes.ConstantNode <33>
+	nodes.DeclareNode
+		nodes.LvalNode <c>
+		nodes.ConstantNode <7>
+	nodes.PrintNode
+		nodes.StringNode <a = (b + c) -> 40>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.SumNode
+			nodes.RvalNode <b>
+			nodes.RvalNode <c>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (b - c) -> 26>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.DifferenceNode
+			nodes.RvalNode <b>
+			nodes.RvalNode <c>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (b * c) -> 231>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.MultiplicationNode
+			nodes.RvalNode <b>
+			nodes.RvalNode <c>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (b / c) -> 4>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.DivisionNode
+			nodes.RvalNode <b>
+			nodes.RvalNode <c>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (b % c) -> 5>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.ModuloNode
+			nodes.RvalNode <b>
+			nodes.RvalNode <c>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (30 == 31) -> 0>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.EqualToNode
+			nodes.ConstantNode <30>
+			nodes.ConstantNode <31>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (31 == 31) -> 1>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.EqualToNode
+			nodes.ConstantNode <31>
+			nodes.ConstantNode <31>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (30 > 31) -> 0>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.GreaterThanNode
+			nodes.ConstantNode <30>
+			nodes.ConstantNode <31>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (31 > 30) -> 1>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.GreaterThanNode
+			nodes.ConstantNode <31>
+			nodes.ConstantNode <30>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (0 || 0) -> 0>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.OrNode
+			nodes.ConstantNode <0>
+			nodes.ConstantNode <0>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (0 || 100) -> 1>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.OrNode
+			nodes.ConstantNode <0>
+			nodes.ConstantNode <100>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (100 || 0) -> 1>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.OrNode
+			nodes.ConstantNode <100>
+			nodes.ConstantNode <0>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (100 || 200) -> 1>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.OrNode
+			nodes.ConstantNode <100>
+			nodes.ConstantNode <200>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (0 && 0) -> 0>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.AndNode
+			nodes.ConstantNode <0>
+			nodes.ConstantNode <0>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (0 && 100) -> 0>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.AndNode
+			nodes.ConstantNode <0>
+			nodes.ConstantNode <100>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (100 && 0) -> 0>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.AndNode
+			nodes.ConstantNode <100>
+			nodes.ConstantNode <0>
+	nodes.PrintNode
+		nodes.VariableNode <a>
+	nodes.PrintNode
+		nodes.StringNode <a = (100 && 200) -> 1>
+	nodes.AssignmentNode
+		nodes.LvalNode <a>
+		nodes.AndNode
+			nodes.ConstantNode <100>
+			nodes.ConstantNode <200>
+	nodes.PrintNode
+		nodes.VariableNode <a>

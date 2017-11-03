@@ -1,0 +1,109 @@
+nodes.MainNode
+	nodes.DeclareNode
+		nodes.LvalNode <index>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <limit>
+		nodes.ConstantNode <100>
+	nodes.DeclareNode
+		nodes.LvalNode <loop>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <d>
+		nodes.ConstantNode <0>
+	nodes.DeclareNode
+		nodes.LvalNode <primesLoop>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <isDivisible>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <isPrime>
+		nodes.ConstantNode <1>
+	nodes.DeclareNode
+		nodes.LvalNode <isGreater>
+		nodes.ConstantNode <1>
+	nodes.WhileNode
+		nodes.ConditionNode <loop>
+		nodes.BodyNode
+			nodes.AssignmentNode
+				nodes.LvalNode <d>
+				nodes.ConstantNode <2>
+			nodes.AssignmentNode
+				nodes.LvalNode <primesLoop>
+				nodes.ConstantNode <1>
+			nodes.AssignmentNode
+				nodes.LvalNode <isDivisible>
+				nodes.ConstantNode <0>
+			nodes.WhileNode
+				nodes.ConditionNode <primesLoop>
+				nodes.BodyNode
+					nodes.AssignmentNode
+						nodes.LvalNode <primesLoop>
+						nodes.MultiplicationNode
+							nodes.RvalNode <d>
+							nodes.RvalNode <d>
+					nodes.AssignmentNode
+						nodes.LvalNode <primesLoop>
+						nodes.GreaterThanNode
+							nodes.RvalNode <index>
+							nodes.RvalNode <primesLoop>
+					nodes.AssignmentNode
+						nodes.LvalNode <isDivisible>
+						nodes.EqualToNode
+							nodes.ModuloNode
+								nodes.RvalNode <index>
+								nodes.RvalNode <d>
+							nodes.ConstantNode <0>
+					nodes.IfNode
+						nodes.ConditionNode <isDivisible>
+						nodes.IfBodyNode
+							nodes.AssignmentNode
+								nodes.LvalNode <primesLoop>
+								nodes.ConstantNode <0>
+					nodes.AssignmentNode
+						nodes.LvalNode <d>
+						nodes.SumNode
+							nodes.RvalNode <d>
+							nodes.ConstantNode <1>
+			nodes.AssignmentNode
+				nodes.LvalNode <isPrime>
+				nodes.EqualToNode
+					nodes.RvalNode <index>
+					nodes.ConstantNode <2>
+			nodes.AssignmentNode
+				nodes.LvalNode <isPrime>
+				nodes.OrNode
+					nodes.EqualToNode
+						nodes.RvalNode <isDivisible>
+						nodes.ConstantNode <0>
+					nodes.RvalNode <isPrime>
+			nodes.AssignmentNode
+				nodes.LvalNode <isPrime>
+				nodes.OrNode
+					nodes.EqualToNode
+						nodes.RvalNode <isDivisible>
+						nodes.ConstantNode <0>
+					nodes.RvalNode <isPrime>
+			nodes.AssignmentNode
+				nodes.LvalNode <isPrime>
+				nodes.AndNode
+					nodes.GreaterThanNode
+						nodes.RvalNode <index>
+						nodes.ConstantNode <1>
+					nodes.RvalNode <isPrime>
+			nodes.IfNode
+				nodes.ConditionNode <isPrime>
+				nodes.IfBodyNode
+					nodes.PrintNode
+						nodes.VariableNode <index>
+			nodes.AssignmentNode
+				nodes.LvalNode <loop>
+				nodes.GreaterThanNode
+					nodes.RvalNode <limit>
+					nodes.RvalNode <index>
+			nodes.AssignmentNode
+				nodes.LvalNode <index>
+				nodes.SumNode
+					nodes.RvalNode <index>
+					nodes.ConstantNode <1>
